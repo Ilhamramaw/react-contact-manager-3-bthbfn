@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
 
+//component add person
 function AddPersonForm(props) {
   const [ person, setPerson ] = useState('');
-    
+   
+  //event handlerChange
   function handleChange(e) {
     setPerson(e.target.value);
   }
-    
+  
+  //event handlerSubmit
   function handleSubmit(e) {
     props.handleSubmit(person);
     setPerson('');
